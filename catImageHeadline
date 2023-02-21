@@ -1,0 +1,3 @@
+#!/bin/zsh
+./headlineImageGenerator
+~/.iterm2/imgcat headline.webp
