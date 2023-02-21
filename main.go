@@ -2,9 +2,12 @@ package main
 
 import (
 	"log"
+	"math/rand"
+	"time"
 )
 
 func main() {
+	rand.Seed(time.Now().UnixNano())
 	headline := getRandomPopularNYTArticle()
 	log.Print(headline)
 	err := generateImage(headline)
