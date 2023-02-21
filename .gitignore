@@ -22,3 +22,4 @@ go.work
 .env.local
 .DS_Store
 *webp
+*json
