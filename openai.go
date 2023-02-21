@@ -118,5 +118,6 @@ func censorHeadline(headline string) string {
 		// Headline either too violent or contains a celebrity
 		panic(err)
 	}
-	return strings.TrimSpace(data["choices"].([]interface{})[0].(map[string]interface{})["text"].(string))
+	quotedHeadline := strings.TrimSpace(data["choices"].([]interface{})[0].(map[string]interface{})["text"].(string))
+	return strings.TrimPrefix(strings.TrimSuffix(quotedHeadline, "\""), "\"")
 }
